@@ -76,26 +76,26 @@ export const translations = {
   },
   pt: {
     nav: {
-      docs: "Documentacao",
+      docs: "Documentação",
       github: "GitHub",
-      getStarted: "Comecar",
+      getStarted: "Começar",
     },
     hero: {
       title: "Lance seu SaaS com IA em",
-      titleHighlight: "dias, nao meses",
+      titleHighlight: "dias, não meses",
       description:
-        "Boilerplate Python pronto para producao com RAG, agentes IA, integracao WhatsApp e arquitetura multi-tenant. Feito com FastAPI, Next.js e Supabase.",
-      cta: "Comecar Agora",
+        "Boilerplate Python pronto para produção com RAG, agentes IA, integração WhatsApp e arquitetura multi-tenant. Feito com FastAPI, Next.js e Supabase.",
+      cta: "Começar Agora",
       demo: "Ver Demo",
     },
     features: {
       rag: {
         title: "Pipeline RAG Completo",
         description:
-          "Ingestao, chunking e busca completos com rastreamento de citacoes. Construido com pgvector e LangChain.",
+          "Ingestão, chunking e busca completos com rastreamento de citações. Construído com pgvector e LangChain.",
         items: [
-          "Ingestao de PDF, Markdown e texto",
-          "Estrategias inteligentes de chunking",
+          "Ingestão de PDF, Markdown e texto",
+          "Estratégias inteligentes de chunking",
           "Respostas em streaming com fontes",
           "Isolamento multi-tenant",
         ],
@@ -103,7 +103,7 @@ export const translations = {
       agents: {
         title: "Framework de Agentes LangGraph",
         description:
-          "Sistema modular de agentes com chamada de ferramentas, gerenciamento de estado e raciocinio multi-etapas.",
+          "Sistema modular de agentes com chamada de ferramentas, gerenciamento de estado e raciocínio multi-etapas.",
         items: [
           "Suporte OpenAI, Anthropic, Ollama",
           "Registro de ferramentas customizadas",
@@ -112,37 +112,37 @@ export const translations = {
         ],
       },
       whatsapp: {
-        title: "Integracao WhatsApp",
+        title: "Integração WhatsApp",
         description:
-          "Conecte sua IA ao WhatsApp Business API. Mensagens, midia e webhooks prontos para uso.",
+          "Conecte sua IA ao WhatsApp Business API. Mensagens, mídia e webhooks prontos para uso.",
         items: [
           "Envio e recebimento de mensagens",
-          "Tratamento de midia (imagens, audio)",
-          "Verificacao de webhooks",
-          "Gerenciamento de sessoes",
+          "Tratamento de mídia (imagens, áudio)",
+          "Verificação de webhooks",
+          "Gerenciamento de sessões",
         ],
       },
     },
     pricing: {
-      title: "Precos simples e transparentes",
-      subtitle: "Pagamento unico. Acesso vitalicio. Sem mensalidades.",
-      oneTime: "pagamento unico",
+      title: "Preços simples e transparentes",
+      subtitle: "Pagamento único. Acesso vitalício. Sem mensalidades.",
+      oneTime: "pagamento único",
       mostPopular: "Mais Popular",
-      viewFull: "Ver Precos Completos",
+      viewFull: "Ver Preços Completos",
       starter: {
         name: "Starter",
         description: "Para devs solo",
-        features: ["Boilerplate completo", "Pipeline RAG basico", "6 meses de updates"],
+        features: ["Boilerplate completo", "Pipeline RAG básico", "6 meses de updates"],
       },
       pro: {
         name: "Pro",
-        description: "Para builders serios",
+        description: "Para builders sérios",
         features: ["Tudo do Starter", "Agentes IA + WhatsApp", "1 ano de updates"],
       },
       enterprise: {
         name: "Enterprise",
-        description: "Para times e agencias",
-        features: ["Tudo do Pro", "Suporte prioritario", "Updates vitalicio"],
+        description: "Para times e agências",
+        features: ["Tudo do Pro", "Suporte prioritário", "Updates vitalício"],
       },
     },
     footer: "Feito com FastAPI, Next.js 15, Supabase e shadcn/ui",
