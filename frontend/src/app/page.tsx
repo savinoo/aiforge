@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, MessageSquare, Database } from "lucide-react";
@@ -15,7 +16,9 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             <Button variant="ghost">Documentation</Button>
             <Button variant="ghost">GitHub</Button>
-            <Button>Get Started</Button>
+            <Link href="/chat">
+              <Button>Get Started</Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -32,12 +35,16 @@ export default function Home() {
             and multi-tenant architecture. Built with FastAPI, Next.js, and Supabase.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button size="lg" className="text-lg px-8">
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
-              View Demo
-            </Button>
+            <Link href="/chat">
+              <Button size="lg" className="text-lg px-8">
+                Get Started
+              </Button>
+            </Link>
+            <Link href="/chat">
+              <Button size="lg" variant="outline" className="text-lg px-8">
+                View Demo
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -104,6 +111,115 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="container mx-auto px-4 py-16 mt-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+            Simple, transparent pricing
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            One-time purchase. Lifetime access. No recurring fees.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+          {/* Starter */}
+          <Card className="border-2">
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl">Starter</CardTitle>
+              <CardDescription>For solo developers</CardDescription>
+              <div className="mt-4">
+                <span className="text-3xl font-bold">$99</span>
+                <span className="text-muted-foreground text-sm ml-1">one-time</span>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Complete boilerplate</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Basic RAG pipeline</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>6 months updates</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Pro - Highlighted */}
+          <Card className="border-primary border-2 shadow-lg relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                Most Popular
+              </span>
+            </div>
+            <CardHeader className="text-center pt-6">
+              <CardTitle className="text-xl">Pro</CardTitle>
+              <CardDescription>For serious builders</CardDescription>
+              <div className="mt-4">
+                <span className="text-3xl font-bold">$199</span>
+                <span className="text-muted-foreground text-sm ml-1">one-time</span>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Everything in Starter</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>AI agents + WhatsApp</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>1 year updates</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Enterprise */}
+          <Card className="border-2">
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl">Enterprise</CardTitle>
+              <CardDescription>For teams & agencies</CardDescription>
+              <div className="mt-4">
+                <span className="text-3xl font-bold">$299</span>
+                <span className="text-muted-foreground text-sm ml-1">one-time</span>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Everything in Pro</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✓</span>
+                  <span>Lifetime updates</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center mt-8">
+          <Button size="lg" variant="outline" asChild>
+            <Link href="/pricing">View Full Pricing</Link>
+          </Button>
         </div>
       </section>
 

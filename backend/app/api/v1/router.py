@@ -5,7 +5,7 @@ Includes all v1 endpoint routers.
 
 from fastapi import APIRouter
 
-from app.api.v1 import health, auth, rag
+from app.api.v1 import health, auth, rag, billing
 
 # Create main v1 router
 api_router = APIRouter()
@@ -14,9 +14,9 @@ api_router = APIRouter()
 api_router.include_router(health.router)
 api_router.include_router(auth.router)
 api_router.include_router(rag.router)
+api_router.include_router(billing.router)
 
 # TODO: Add more routers as you build out the API
-# from app.api.v1 import agents, whatsapp, payments
+# from app.api.v1 import agents, whatsapp
 # api_router.include_router(agents.router)
 # api_router.include_router(whatsapp.router)
-# api_router.include_router(payments.router)
