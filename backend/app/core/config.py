@@ -52,19 +52,19 @@ class Settings(BaseSettings):
     # OpenAI
     openai_api_key: str = Field(..., description="OpenAI API key")
 
-    # Anthropic
-    anthropic_api_key: str = Field(..., description="Anthropic API key")
+    # Anthropic (optional)
+    anthropic_api_key: str = Field(default="", description="Anthropic API key")
 
-    # LemonSqueezy
-    lemonsqueezy_api_key: str = Field(..., description="LemonSqueezy API key")
-    lemonsqueezy_store_id: str = Field(..., description="LemonSqueezy store ID")
-    lemonsqueezy_webhook_secret: str = Field(..., description="LemonSqueezy webhook secret")
+    # LemonSqueezy (optional until billing is set up)
+    lemonsqueezy_api_key: str = Field(default="", description="LemonSqueezy API key")
+    lemonsqueezy_store_id: str = Field(default="", description="LemonSqueezy store ID")
+    lemonsqueezy_webhook_secret: str = Field(default="", description="LemonSqueezy webhook secret")
 
-    # WhatsApp
-    whatsapp_phone_number_id: str = Field(..., description="WhatsApp phone number ID")
-    whatsapp_access_token: str = Field(..., description="WhatsApp access token")
-    whatsapp_verify_token: str = Field(..., description="WhatsApp verify token")
-    whatsapp_business_account_id: str = Field(..., description="WhatsApp business account ID")
+    # WhatsApp (optional until WhatsApp integration is set up)
+    whatsapp_phone_number_id: str = Field(default="", description="WhatsApp phone number ID")
+    whatsapp_access_token: str = Field(default="", description="WhatsApp access token")
+    whatsapp_verify_token: str = Field(default="", description="WhatsApp verify token")
+    whatsapp_business_account_id: str = Field(default="", description="WhatsApp business account ID")
 
     # Rate Limiting
     rate_limit_per_minute: int = Field(default=60, description="Rate limit per minute")
